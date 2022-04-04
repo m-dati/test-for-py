@@ -1,12 +1,12 @@
 """Basic tests for the Python 3.6 and 3.9 base container images."""
-from bci_tester.data import PYTHON36_CONTAINER
-from bci_tester.data import PYTHON39_CONTAINER
+#from bci_tester.data import PYTHON36_CONTAINER
+#from bci_tester.data import PYTHON39_CONTAINER
 
 
-CONTAINER_IMAGES = [PYTHON36_CONTAINER, PYTHON39_CONTAINER]
+#CONTAINER_IMAGES = [PYTHON36_CONTAINER, PYTHON39_CONTAINER]
 
 
-def test_tensorflow(auto_container):
+def test_tensorflow():
     import tensorflow as tf
     print("TensorFlow version:", tf.__version__)
 
@@ -25,10 +25,12 @@ def test_tensorflow(auto_container):
     predictions = model(x_train[:1]).numpy()
     predictions
 
-    tf.nn.softmax(predictions).numpy()
+    print(tf.nn.softmax(predictions).numpy())
 
     loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
-    loss_fn(y_train[:1], predictions).numpy()
+    
+    print(loss_fn(y_train[:1], predictions).numpy())
+
     model.compile(optimizer='adam',
               loss=loss_fn,
               metrics=['accuracy'])
@@ -42,7 +44,7 @@ def test_tensorflow(auto_container):
       tf.keras.layers.Softmax()
     ])
 
-    probability_model(x_test[:5])
+    print(probability_model(x_test[:5]))
 
 
 if __name__ == "__main__":
