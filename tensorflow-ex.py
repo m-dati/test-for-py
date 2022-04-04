@@ -1,12 +1,7 @@
-"""Basic tests for the Python 3.6 and 3.9 base container images."""
-#from bci_tester.data import PYTHON36_CONTAINER
-#from bci_tester.data import PYTHON39_CONTAINER
+"""Basic tests for the Python 3.6 and 3.9 base container images,based on tensorflow."""
 
 
-#CONTAINER_IMAGES = [PYTHON36_CONTAINER, PYTHON39_CONTAINER]
-
-
-def test_tensorflow():
+def test_tensorflow_example1():
     import tensorflow as tf
     print("TensorFlow version:", tf.__version__)
 
@@ -48,5 +43,5 @@ def test_tensorflow():
 
 
 if __name__ == "__main__":
-    test_tensorflow()
+    test_tensorflow_example1()
 
