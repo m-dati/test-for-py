@@ -1,9 +1,9 @@
 """Basic tests for the Python 3.6 and 3.9 base container images."""
-from bci_tester.data import PYTHON36_CONTAINER
-from bci_tester.data import PYTHON39_CONTAINER
+#from bci_tester.data import PYTHON36_CONTAINER
+#from bci_tester.data import PYTHON39_CONTAINER
 
 
-CONTAINER_IMAGES = [PYTHON36_CONTAINER, PYTHON39_CONTAINER]
+#CONTAINER_IMAGES = [PYTHON36_CONTAINER, PYTHON39_CONTAINER]
 
 
 def test_tensorflow(auto_container):
