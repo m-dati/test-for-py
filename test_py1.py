@@ -43,3 +43,8 @@ def test_tensorflow(auto_container):
     ])
 
     probability_model(x_test[:5])
+
+
+if __name__ == "__main__":
+    test_tensorflow()
+
